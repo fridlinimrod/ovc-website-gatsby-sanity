@@ -3,7 +3,9 @@ import React from 'react';
 export default function Footer() {
   return (
     <footer>
-      <p className="center">&copy; Slick's Slices {new Date().getFullYear()}</p>
+      <p className="center">
+        &copy; One Video Control (OVC) {new Date().getFullYear()}
+      </p>
     </footer>
   );
 }
