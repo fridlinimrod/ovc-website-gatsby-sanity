@@ -33,13 +33,9 @@ export default function Layout({ children }) {
     <>
       <GlobalStyles />
       <Typography />
-      <SiteBorderStyles>
-        <ContentStyles>
-          <Nav />
-          {children}
-          <Footer />
-        </ContentStyles>
-      </SiteBorderStyles>
+      <Nav />
+      {children}
+      <Footer />
     </>
   );
 }

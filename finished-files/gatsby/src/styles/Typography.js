@@ -8,7 +8,7 @@ const Typography = createGlobalStyle`
     src: url(${font});
   }
   html {
-    font-family: FrenchFries, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--black);
   }
   p, li {
@@ -19,6 +19,7 @@ const Typography = createGlobalStyle`
     margin: 0;
   }
   a {
+    font-family: FrenchFries, 
     color: var(--black);
     text-decoration-color: var(--red);
     /* Chrome renders this weird with this font, so we turn it off */
@@ -31,11 +32,9 @@ const Typography = createGlobalStyle`
     display: inline;
     line-height: 1;
   }
-
   .center {
     text-align: center;
   }
-
   .tilt {
     transform: rotate(-2deg);
   }
