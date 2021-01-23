@@ -1,11 +1,13 @@
 {
   "root": true,
   "api": {
-    "projectId": "0jfvvkkd",
+    "backup":"0jfvvkkd",
+    "backup2":"tm9jbhmc",
+    "projectId": "9vkkhmyp",
     "dataset": "production"
   },
   "project": {
-    "name": "slicks-slices"
+    "name": "OVC"
   },
   "plugins": [
     "@sanity/base",

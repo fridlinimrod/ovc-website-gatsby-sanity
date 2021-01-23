@@ -1,10 +1,10 @@
 {
-  "name": "slicks-slices-backend",
+  "name": "ovc-backend",
   "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Wes Bos <wesbos@gmail.com>",
+  "author": "Nimrod Fridlin <fridlinimrod@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
     "lint": "eslint .",

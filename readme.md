@@ -1,3 +1,8 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fd781f83-7b39-4025-b3d9-36200c26bae0/deploy-status)](https://app.netlify.com/sites/one-video-control/deploys)
+
+todo - update the readme :), delete everything below.
+
+
 ![Master Gatbsy](https://res.cloudinary.com/wesbos/image/upload/c_scale,q_auto,w_1600/v1600356131/GAT-social-share_rxvhdg.png)
 
 # Master Gatsby
