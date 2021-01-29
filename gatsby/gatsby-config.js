@@ -9,7 +9,14 @@ export default {
     description: 'One Video Control (to rule them all)',
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
+    {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+        publisherId: `ca-pub-5693882915720616`,
+      },
+    },
     {
       resolve: 'gatsby-source-sanity',
       options: {

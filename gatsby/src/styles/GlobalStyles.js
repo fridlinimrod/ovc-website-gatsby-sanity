@@ -9,6 +9,12 @@ const GlobalStyles = createGlobalStyle`
     --yellow: #ffc600;
     --white: #fff;
     --grey: #efefef;
+    --ovc-main-color: #1e1e1e;
+    --secondary-color: #474343;
+    --ovc-white: #ffffff;
+    --ovc-text-color: var(--ovc-white);
+    --ovc-top-level-padding: 0 5%;
+    --ovc-purple: #a4ade9;
   }
   html {
     background-image: url(${bg});
@@ -16,6 +22,13 @@ const GlobalStyles = createGlobalStyle`
     background-attachment: fixed;
     font-size: 10px;
     line-height: 1.4;
+    &.light {
+      --ovc-main-color: "red";
+      --secondary-color: "blue";      
+      --ovc-text-color: "black";
+      --ovc-top-level-padding: 0 5%;
+      --ovc-purple: #a4ade9;
+    }
   }
   body {
     font-size: 2rem;
