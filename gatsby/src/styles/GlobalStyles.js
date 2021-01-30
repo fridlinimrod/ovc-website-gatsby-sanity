@@ -34,14 +34,23 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     color: var(--ovc-text-color);
-    font-size: 2rem;    
+    font-size: 2rem;            
+  }
+
+  iframe {
+    width: 640px;  
+    height: 360px;    
+    @media (max-width: 800px) {
+    width: 100%;
+    height: auto;
+    }
   }
 
   fieldset {
     border-color: rgba(0,0,0,0.1);
     border-width: 1px;
   }
-  button {
+  /* button {
     border: 0;
     padding: 0.6rem 1rem;
     border-radius: 2px;
@@ -53,7 +62,7 @@ const GlobalStyles = createGlobalStyle`
     &:hover {
       --cast: 4px;
     }
-  }
+  } */
   .gatsby-image-wrapper img[src*=base64\\,] {
     image-rendering: -moz-crisp-edges;
     image-rendering: pixelated;

@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const NavStyles = styled.nav`
-  background: var(--ovc-secondary-color);
   ul {
     height: 100%;
     margin: 0;
@@ -22,13 +21,16 @@ const NavStyles = styled.nav`
       color: var(--ovc-text-color);
     }
   }
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 
 const activeStyle = { color: 'var(--ovc-text-color)' };
 const navItems = [
   { to: '/', text: 'Home' },
   { to: '/about/', text: 'About' },
-  { to: '/features/', text: 'How To Use' },
+  { to: '/features/', text: 'Features and demos' },
   { to: '/what-is-new/', text: 'What is new' },
   { to: '/privacy-policy/', text: 'Privacy Policy' },
 ];

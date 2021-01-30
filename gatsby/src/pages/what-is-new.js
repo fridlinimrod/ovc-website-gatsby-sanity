@@ -17,7 +17,7 @@ const WhatIsNew = () => (
           5 seconds, great for those who forget to minimize and walk away :)
         </li>
         <li>
-          *New Feature* - Volume will be preserved on different videos{' '}
+          *New Feature* - Volume will be preserved on different videos
           <b>**on the same site**</b>, you can select to preserve the speed as
           well.
         </li>
@@ -31,10 +31,10 @@ const WhatIsNew = () => (
           not skip forward).
         </li>
         <li>
-          *Minor bug fix* - in the{' '}
+          *Minor bug fix* - in the
           <a href="./options.html" target="_blank">
             Setting page
-          </a>{' '}
+          </a>
           when hovering with the mouse over the themes, the mouse will now
           indicate they are clickable.
         </li>
@@ -46,7 +46,7 @@ const WhatIsNew = () => (
     </h3>
     <br />
     <h3>
-      For instruction videos and news,{' '}
+      For instruction videos and news,
       <a href="https://www.facebook.com/OVC-One-Video-Control-108118054257856">
         Follow OVC on Facebook
       </a>
@@ -59,8 +59,6 @@ const WhatIsNew = () => (
     <br />
     <iframe
       title="new-version-video"
-      width="640"
-      height="360"
       src="https://www.youtube.com/embed/A8mtWuqHmYw?controls=0"
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -68,11 +66,11 @@ const WhatIsNew = () => (
     />
 
     <h4 className="rate">
-      Hey, if you like the extension I would really appreciate a
+      Hey, if you like the extension I would really appreciate a &nbsp;
       <a href="https://chrome.google.com/webstore/detail/ovc-one-video-control/analeldnikfgekckpcppegfekineelbb/">
         5 stars rating
       </a>
-      in the store as well as a positive feedback.
+      &nbsp; in the store as well as a positive feedback.
       <br />
       Help more people enjoy this and promise your place in heaven ;)
     </h4>

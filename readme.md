@@ -1,56 +1,26 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fd781f83-7b39-4025-b3d9-36200c26bae0/deploy-status)](https://app.netlify.com/sites/one-video-control/deploys)
 
-todo - update the readme :), delete everything below.
+### OVC - One Video Control (to rule them all) 
+*Redefining video interfaces*
+
+This is the repository of the website for the Chrome extension, to get the chrome extension, go to: [OVC on chrome web store](https://chrome.google.com/webstore/detail/ovc-one-video-control/analeldnikfgekckpcppegfekineelbb "OVC Extension")
+
+OVC - One Video Control lets you control all the videos you see while browsing - with your own control and your own configuration.
+
+### Why do I need it?! 
+
+It exposes **new ways to interact with videos**: 
+A "popout" button to **extract the video from the browser** and play it as a "stand alone", also known as 'picture in picture',
+**Scrolling up and down to increase / decrease speed or volume** of the video (no more guessing if you want 1.25 or 1.75, just scroll up and down for faster and slower - with no limitation),
+A button to **toggle max speed** on and off (very useful for fast forwarding advertisements when possible, or just to find that part in the video you are looking for),
+Easy ways to go forward and backward, exposes a short skip and a long skip buttons (defaults to 5 and 30 seconds),
+mute , repeat, and more to come!
+
+### The fun parts:
+You can customize almost everything in your OVC control,
+The amount to change the speed, the number of seconds to jump forward or backward for short and long skips,
+The look and feel of the control (from a set of existing themes or create your own custom theme).
+Wether to even show the control or hide it and control everything with you custom keyboard shortcuts, and many more!!
+After installing the extension, head to the settings page, and the keyboard shortcuts page and see for yourself :)
 
 
-![Master Gatbsy](https://res.cloudinary.com/wesbos/image/upload/c_scale,q_auto,w_1600/v1600356131/GAT-social-share_rxvhdg.png)
-
-# Master Gatsby
-
-A Premium JavaScript + CSS Training Course from Wes Bos. You can grab the course at [MasterGatsby.com](https://mastergatsby.com).
-
-This repo includes the starter files, stepped solutions and sample data for doing the course.
-
-## FAQ
-
-**Q:** How can I set a custom Emmet expand keyboard shortcut?
-
-**A:** In VS Code, you can go to `File` -> `Preferences` -> `Keyboard Shortcuts` (Windows, Linux) or `Code` -> `Preferences` -> `Keyboard Shortcuts` (Mac). Search for `Emmet Expand Abbreviation` and you should see the current keyboard shortcut there. Double-click on the current key-bind to set a new keyboard shortcut. I have mine set to `Ctrl` + `E` which I really like but you can pick any combo you like!
-
-**Q:** Where do I find the nice Pizza images that are used in the course?
-
-**A:** The Pizza images can be found in the Sanity [sample-data folder](https://github.com/wesbos/master-gatsby/tree/master/starter-files/sanity/sample-data/nice-pizza-pics) in the starter files.
-
-**Q:** My data was showing perfectly fine in Gatsby a few days ago and now it isn't.
-
-**A:** Many common issues such as stale data or corrupt data can be fixed by running `gatsby clean` in the terminal - make sure you are in the Gatsby folder in the terminal. Gatsby uses an aggressive cache that can corrupt at times so you can try to fix it by cleaning the cache out.
-
-**Q:** I'm getting a `npm ERR! Cannot read property 'matches' of undefined` message when installing the `gatsby-cli` globally.
-
-**A:** Node 15.x isn't yet supported and will cause that error, it's better to stick with Node 14.x for the course at the moment.
-
-**Q:** I'm getting an error when starting Gatsby that says it's not finding a `gatsby-source-sanity/src/gatsby-node.ts` file.
-
-**A:** This error appears if you have a typo in your `options` that you pass to the `gatsby-source-sanity` plugin in the `gatsby-config.js` file. You can compare your code against the [stepped solution](https://github.com/wesbos/master-gatsby/blob/master/stepped-solutions/17/gatsby-config.js) for that file. Check that you have the same _capitilization_ of the `options` (projectId, dataset, watchMode) as it is a common cause of the issue.
-
-**Q:** I'm getting a `import dotenv from 'dotenv'; SyntaxError: Unexpected identifier` error when starting the Gatsby server.
-
-**A:** Please use the provided [npm scripts](https://github.com/wesbos/master-gatsby/blob/master/starter-files/gatsby/package.json#L7) to start the Gatsby server (such as `npm run develop` or `yarn develop`). Don't use the global `gatsby develop` command as Gatsby doesn't support using ESM imports yet. The provided npm scripts uses an `esm` npm package to add support for the newer import syntax.
-
-**Q:** I'm getting a `Error: GraphQL API not deployed` error when starting the Gatsby server.
-
-**A:** You need to make sure you deployed the Sanity dataset to the GraphQL API by running the `sanity graphql deploy production` command in your terminal before it can be used by Gatsby. _Make sure that you are in the `Sanity` folder in your terminal when you run that command._
-
-**Q:** I made a change to my Sanity content and it's not showing in Gatsby in real-time?
-
-**A:** Please make sure you have the 2 options `watchMode` and `token` configured in the `gatsby-source-sanity` plugin. If the changes you are making to the content is `unpublished` and you'd like to preview that in real-time you would need to add the `overlayDrafts` option to your Gatsby plugin. You can read more about this in the [gatsby-source-sanity readme](https://github.com/sanity-io/gatsby-source-sanity#preview-of-unpublished-content).
-
-**Q:** I made a change to my Sanity schema and it's not showing in Gatsby?
-
-**A:** Changes to the schema in your local Sanity studio will not automatically change the Sanity GraphQL API, you'll have to deploy those changes by using `sanity graphql deploy production`. _Make sure that you are in the `Sanity` folder in your terminal when you run that command._
-
-## Comunity Contributions
-
-Did you blog about your experience? Do the course in Typescript? Use WordPress instead? Send us a PR with links to your implementations!
-
-- [Creating your own Gatsby Live Preview for Sanity](https://www.simeongriggs.dev/roll-your-own-gatsby-live-preview-for-sanity) has never been easier now with DigitalOcean App Platform.

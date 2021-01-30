@@ -1,6 +1,14 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import styled from 'styled-components';
 
+const FeatureStyles = styled.div`
+  display: flex;
+  flex-direction: column;
+  .feature-description {
+    margin-bottom: 10px;
+  }
+`;
 export default function featuresPage({
   data: {
     features: { nodes: features },
@@ -12,24 +20,19 @@ export default function featuresPage({
     <div>
       {versions.map(({ versionNumber }) => (
         <>
-          <div className="version-wrapper">{versionNumber}</div>
           <div className="version-features">
             {features.map(({ description, featureTitle, youtubeEmbedCode }) => (
-              <div className="feature-wrapper">
+              <FeatureStyles>
                 <span className="title feature-title">{featureTitle}</span>
-                <span className="description feature-description">
-                  {description}
-                </span>
+                <span className="feature-description">{description}</span>
                 <iframe
                   title={description}
-                  width="640"
-                  height="360"
                   src={youtubeEmbedCode}
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
-              </div>
+              </FeatureStyles>
             ))}
           </div>
         </>
