@@ -12,7 +12,7 @@ export const About = () => (
       You can customize the controller, both its functionality and its look and
       feel. <br />
       to see the list of features OVC provides, head up to the &nbsp;
-      <Link to="/features">Features page</Link>
+      <Link to="/features/">Features page</Link>
     </p>
     <p>
       To Install OVC go to the&nbsp;
