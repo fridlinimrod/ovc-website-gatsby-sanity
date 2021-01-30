@@ -8,17 +8,21 @@ const MobileNavStyles = styled.nav`
     display: none;
   }
   .menu {
-    top: 15px;
-    left: 15px;
+    top: 7px;
+    left: 7px;
   }
   ul {
     background-color: var(--ovc-secondary-color);
     list-style: none;
-    width: 50%;
+    width: 100%;
     position: absolute;
+    top: 6px;
     z-index: 5;
     &.hidden {
       display: none;
+    }
+    li ~ li {
+      border-top: 1px solid var(--ovc-purple);
     }
     a {
       text-decoration: none;

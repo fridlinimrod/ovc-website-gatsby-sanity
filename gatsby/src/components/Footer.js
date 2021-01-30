@@ -22,7 +22,7 @@ export default function Footer() {
   return (
     <FooterStyles>
       <div className="wrapper">
-        <p>&copy; One Video Control (OVC) {new Date().getFullYear()}.</p>
+        {/* <p>&copy; One Video Control (OVC) {new Date().getFullYear()}.</p> */}
         <span>Share the awesomeness :) </span>
         <FacebookShareButton
           url="onevideocontrol.com"
