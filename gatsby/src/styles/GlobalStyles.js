@@ -10,14 +10,16 @@ const GlobalStyles = createGlobalStyle`
     --white: #fff;
     --grey: #efefef;
     --ovc-main-color: #1e1e1e;
-    --secondary-color: #474343;
+    --ovc-secondary-color: #474343;
     --ovc-white: #ffffff;
     --ovc-text-color: var(--ovc-white);
     --ovc-top-level-padding: 0 5%;
     --ovc-purple: #a4ade9;
   }
   html {
-    background-image: url(${bg});
+    /* background-image: url(${bg}); */
+    background: var(--ovc-main-color);
+
     /* background-size: 450px; */
     background-attachment: fixed;
     font-size: 10px;
@@ -31,17 +33,15 @@ const GlobalStyles = createGlobalStyle`
     }
   }
   body {
-    font-size: 2rem;
-    margin: auto;
-    width: 80%;
+    color: var(--ovc-text-color);
+    font-size: 2rem;    
   }
+
   fieldset {
     border-color: rgba(0,0,0,0.1);
     border-width: 1px;
   }
   button {
-    background: var(--red);
-    color: white;
     border: 0;
     padding: 0.6rem 1rem;
     border-radius: 2px;
@@ -59,18 +59,19 @@ const GlobalStyles = createGlobalStyle`
     image-rendering: pixelated;
   }
   /* Scrollbar Styles */
-  body::-webkit-scrollbar {
+  ::-webkit-scrollbar {
     width: 12px;
   }
   html {
     scrollbar-width: thin;
-    scrollbar-color: var(--red) var(--white);
+    scrollbar-color: var(--ovc-purple) var(--white);
   }
-  body::-webkit-scrollbar-track {
+  ::-webkit-scrollbar-track {
     background: var(--white);
+    border-radius: 5px;
   }
-  body::-webkit-scrollbar-thumb {
-    background-color: var(--red) ;
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--ovc-purple) ;
     border-radius: 6px;
     border: 3px solid var(--white);
   }
@@ -88,6 +89,9 @@ const GlobalStyles = createGlobalStyle`
     position: relative;
     display: inline-block;
   }
+
+  a:-webkit-any-link {
+    color: var(--ovc-purple);
 `;
 
 export default GlobalStyles;
