@@ -27,10 +27,10 @@ const NavStyles = styled.nav`
 const activeStyle = { color: 'var(--ovc-text-color)' };
 const navItems = [
   { to: '/', text: 'Home' },
-  { to: '/about', text: 'About' },
-  { to: '/features', text: 'How To Use' },
-  { to: '/what-is-new', text: 'What is new' },
-  { to: '/privacy-policy', text: 'Privacy Policy' },
+  { to: '/about/', text: 'About' },
+  { to: '/features/', text: 'How To Use' },
+  { to: '/what-is-new/', text: 'What is new' },
+  { to: '/privacy-policy/', text: 'Privacy Policy' },
 ];
 const Nav = () => (
   <NavStyles>
