@@ -3,9 +3,13 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const NavStyles = styled.nav`
+  background: var(--ovc-secondary-color);
   ul {
+    height: 100%;
+    margin: 0;
     display: flex;
     justify-content: space-around;
+    align-items: center;
   }
 
   li {
@@ -14,28 +18,30 @@ const NavStyles = styled.nav`
 
   a {
     text-decoration: none;
+    :hover {
+      color: var(--ovc-text-color);
+    }
   }
 `;
+
+const activeStyle = { color: 'var(--ovc-text-color)' };
+const navItems = [
+  { to: '/', text: 'Home' },
+  { to: '/about', text: 'About' },
+  { to: '/features', text: 'How To Use' },
+  { to: '/what-is-new', text: 'What is new' },
+  { to: '/privacy-policy', text: 'Privacy Policy' },
+];
 const Nav = () => (
   <NavStyles>
     <ul>
-      <li>
-        <Link to="/" activeStyle={{ backgroundColor: 'black', color: 'white' }}>
-          Home
-        </Link>
-      </li>
-      <li>
-        <Link to="/about"> About</Link>
-      </li>
-      <li>
-        <Link to="/features"> How to use</Link>
-      </li>
-      <li>
-        <Link to="/what-is-new"> What is new</Link>
-      </li>
-      <li>
-        <Link to="/privacy-policy">Privacy Policy</Link>
-      </li>
+      {navItems.map(({ to, text }) => (
+        <li>
+          <Link to={to} activeStyle={activeStyle}>
+            {text}
+          </Link>
+        </li>
+      ))}
     </ul>
   </NavStyles>
 );

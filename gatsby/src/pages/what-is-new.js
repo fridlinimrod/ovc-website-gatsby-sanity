@@ -1,9 +1,7 @@
 import React from 'react';
 
-export default () => (
+const WhatIsNew = () => (
   <div>
-    <h1 id="title" />
-    <br />
     <h3>
       The following are the new features for this version (watch the video below
       to see demo)
@@ -87,3 +85,5 @@ export default () => (
     </h5>
   </div>
 );
+
+export default WhatIsNew;

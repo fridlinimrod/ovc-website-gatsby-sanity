@@ -32,7 +32,7 @@ const Styles = styled.div`
     position: absolute;
     right: -300%;
     font-size: 10rem;
-    bottom: 21px;
+    bottom: 8px;
   }
 
   .wrapper.animate .first-letter {
