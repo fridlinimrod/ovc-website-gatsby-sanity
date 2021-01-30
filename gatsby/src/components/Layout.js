@@ -13,10 +13,12 @@ const LayoutStyles = styled.div`
   grid-template-rows: 4vh minmax(200px, 90vh) 1fr;
   nav ~ div {
     overflow: auto;
-    margin: 0 auto;
-    width: 80%;
     margin-top: 10px;
     padding: 0 15px;
+    & > div {
+      margin: 0 auto;
+      width: 80%;
+    }
   }
   footer,
   nav {
@@ -31,7 +33,7 @@ export default function Layout({ children }) {
       <LayoutStyles>
         <Nav />
         <MobileNav />
-        {children}
+        <div>{children}</div>
         <Footer />
       </LayoutStyles>
     </>

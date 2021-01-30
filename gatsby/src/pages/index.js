@@ -27,6 +27,10 @@ const HomeStyles = styled.div`
       font-size: 10rem;
     }
   }
+  .bold {
+    font-weight: bold;
+    color: var(--ovc-purple);
+  }
 `;
 
 const Home = () => {
@@ -49,7 +53,7 @@ const Home = () => {
       </p>
       <h2>Why do I need it?!</h2>
       <p>
-        It exposes
+        It exposes &nbsp;
         <span className="bold">new ways to interact with videos</span>:<br />
         <ul>
           <li>
@@ -64,20 +68,17 @@ const Home = () => {
             of the video (no more guessing if you want 1.25 or 1.75, just scroll
             up and down for faster and slower - with no limitation)
           </li>
-          <br />
           <li>
             A button to
             <span className="bold">Toggle max speed on and off</span> (very
             useful for fast forwarding advertisements when possible, or just to
             find that part in the video you are looking for)
           </li>
-          <br />
           <li>
             <span className="bold">Easy ways to go forward and backward</span>,
             exposes a short skip and a long skip buttons (defaults to 5 and 30
             seconds)
           </li>
-          <br />
           <li>mute , repeat, and more to come!</li>
         </ul>
       </p>
