@@ -36,7 +36,7 @@ const HomeStyles = styled.div`
 const Home = () => {
   const [animate, setAnimate] = useState(false);
   useEffect(() => {
-    setTimeout(() => setAnimate(true), 500);
+    setTimeout(() => setAnimate(true), 1300);
   }, [setAnimate]);
   return (
     <HomeStyles>
