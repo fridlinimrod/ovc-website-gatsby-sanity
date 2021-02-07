@@ -38,8 +38,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   iframe {
-    width: 640px;  
-    height: 360px;    
+    width: 960px;  
+    height: 540px;    
     @media (max-width: 800px) {
     width: 100%;
     height: auto;

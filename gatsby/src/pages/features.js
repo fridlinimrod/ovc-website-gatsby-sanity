@@ -1,6 +1,14 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  ButtonBack,
+  ButtonNext,
+} from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
 const FeatureStyles = styled.div`
   display: flex;
@@ -17,26 +25,35 @@ export default function featuresPage({
 }) {
   console.log({ features, versions });
   return (
-    <div>
-      {versions.map(({ versionNumber }) => (
-        <>
-          <div className="version-features">
-            {features.map(({ description, featureTitle, youtubeEmbedCode }) => (
-              <FeatureStyles>
-                <span className="title feature-title">{featureTitle}</span>
-                <span className="feature-description">{description}</span>
-                <iframe
-                  title={description}
-                  src={youtubeEmbedCode}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </FeatureStyles>
+    <div style={{ height: '50%' }}>
+      <CarouselProvider
+        // TODO: see if in mobile and set different width and height.
+        naturalSlideWidth={960}
+        naturalSlideHeight={540}
+        totalSlides={features.filter((f) => f.youtubeEmbedCode).length}
+      >
+        <Slider>
+          {features
+            .filter((f) => f.youtubeEmbedCode)
+            .map(({ description, featureTitle, youtubeEmbedCode }, index) => (
+              <Slide index={index} className="ovc-slide" key={youtubeEmbedCode}>
+                <FeatureStyles>
+                  <span className="title feature-title">{featureTitle}</span>
+                  <span className="feature-description">{description}</span>
+                  <iframe
+                    title={description}
+                    src={youtubeEmbedCode}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </FeatureStyles>
+              </Slide>
             ))}
-          </div>
-        </>
-      ))}
+        </Slider>
+        <ButtonBack>Back</ButtonBack>
+        <ButtonNext>Next</ButtonNext>
+      </CarouselProvider>
     </div>
   );
 }
