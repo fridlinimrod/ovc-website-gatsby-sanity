@@ -51,7 +51,10 @@ export default ({ word, animate }) => {
       <div className={`wrapper ${animate ? 'animate' : ''}`}>
         <span className="big">{firstLetter}</span>
         <span className="small">{rest}</span>
-        <div className="first-letter" data-rest={rest}>
+        <div
+          className="first-letter"
+          data-rest={rest.join ? rest.join('') : rest}
+        >
           {firstLetter}
         </div>
       </div>

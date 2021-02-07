@@ -38,7 +38,10 @@ export default ({ word, animate }) => {
   return (
     <Styles>
       <div className={`wrapper ${animate ? 'animate' : ''}`}>
-        <div className="first-letter" data-rest={rest}>
+        <div
+          className="first-letter"
+          data-rest={rest.join ? rest.join('') : rest}
+        >
           {firstLetter}
         </div>
       </div>
