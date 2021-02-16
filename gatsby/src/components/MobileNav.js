@@ -109,7 +109,9 @@ const MobileNav = () => {
       </div>
       <ul className={`${isOpen ? 'visible' : 'hidden'}`}>
         {navItems.map(({ to, text }) => (
-          <li>{getCustomAnimatedLink({ to, text })}</li>
+          <li onClick={() => setIsOpen(false)}>
+            {getCustomAnimatedLink({ to, text })}
+          </li>
         ))}
       </ul>
     </MobileNavStyles>
