@@ -9,6 +9,9 @@ export default {
     description: 'One Video Control (to rule them all)',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-transition-link',
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {

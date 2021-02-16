@@ -34,7 +34,10 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     color: var(--ovc-text-color);
-    font-size: 2rem;            
+    font-size: 2rem;
+    @media (max-width: 800px) {
+      font-size: 1rem;
+    }
   }
 
   iframe {
@@ -49,6 +52,10 @@ const GlobalStyles = createGlobalStyle`
   fieldset {
     border-color: rgba(0,0,0,0.1);
     border-width: 1px;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
   }
   /* button {
     border: 0;

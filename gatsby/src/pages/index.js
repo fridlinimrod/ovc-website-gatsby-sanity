@@ -1,9 +1,10 @@
-import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Control from '../components/Control';
 import One from '../components/One';
 import Video from '../components/Video';
+import { getCustomAnimatedLink } from '../utils/general';
 
 const HomeStyles = styled.div`
   .animated-words {
@@ -54,7 +55,11 @@ const Home = () => {
       <h2>Why do I need it?!</h2>
       <p>
         It exposes &nbsp;
-        <span className="bold">new ways to interact with videos</span>:<br />
+        {getCustomAnimatedLink({
+          to: '/features/',
+          text: 'new ways to interact with videos',
+        })}
+        :<br />
         <ul>
           <li>
             <span className="bold">A "popout" button</span> to extract the video
@@ -70,9 +75,11 @@ const Home = () => {
           </li>
           <li>
             A button to
-            <span className="bold">Toggle max speed on and off</span> (very
-            useful for fast forwarding advertisements when possible, or just to
-            find that part in the video you are looking for)
+            <span className="bold">
+              &nbsp; Toggle max speed on and off
+            </span>{' '}
+            (very useful for fast forwarding advertisements when possible, or
+            just to find that part in the video you are looking for)
           </li>
           <li>
             <span className="bold">Easy ways to go forward and backward</span>,

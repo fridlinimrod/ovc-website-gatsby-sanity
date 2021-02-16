@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import styled from 'styled-components';
+import { getCustomAnimatedLink } from '../utils/general';
 
 const NavStyles = styled.nav`
   ul {
@@ -26,7 +26,6 @@ const NavStyles = styled.nav`
   }
 `;
 
-const activeStyle = { color: 'var(--ovc-text-color)' };
 const navItems = [
   { to: '/', text: 'Home' },
   { to: '/about/', text: 'About' },
@@ -38,11 +37,7 @@ const Nav = () => (
   <NavStyles>
     <ul>
       {navItems.map(({ to, text }) => (
-        <li>
-          <Link to={to} activeStyle={activeStyle}>
-            {text}
-          </Link>
-        </li>
+        <li>{getCustomAnimatedLink({ to, text })}</li>
       ))}
     </ul>
   </NavStyles>

@@ -1,5 +1,6 @@
-import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import React from 'react';
+import { getCustomAnimatedLink } from '../utils/general';
 
 export const About = () => (
   <div>
@@ -12,13 +13,13 @@ export const About = () => (
       You can customize the controller, both its functionality and its look and
       feel. <br />
       to see the list of features OVC provides, head up to the &nbsp;
-      <Link to="/features/">Features page</Link>
+      {getCustomAnimatedLink({ to: '/features/', text: 'Features page' })}
     </p>
     <p>
       To Install OVC go to the&nbsp;
-      <Link to="https://chrome.google.com/webstore/detail/ovc-one-video-control/analeldnikfgekckpcppegfekineelbb">
+      <a to="https://chrome.google.com/webstore/detail/ovc-one-video-control/analeldnikfgekckpcppegfekineelbb">
         chrome web store and install it
-      </Link>
+      </a>
     </p>
   </div>
 );

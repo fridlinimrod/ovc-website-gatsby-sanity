@@ -44,7 +44,7 @@ const Styles = styled.div`
   }
 `;
 
-export default ({ word, animate }) => {
+const One = ({ word, animate }) => {
   const [firstLetter, ...rest] = word;
   return (
     <Styles>
@@ -61,3 +61,5 @@ export default ({ word, animate }) => {
     </Styles>
   );
 };
+
+export default One;

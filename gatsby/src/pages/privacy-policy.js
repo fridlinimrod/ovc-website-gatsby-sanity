@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 
-export default (props) => (
+const PrivacyPolicy = () => (
   <div>
     <p>
       OVC uses Google Analytics to track events,
@@ -15,9 +15,11 @@ export default (props) => (
     </p>
     <p>
       To Install OVC go to the&nbsp;
-      <Link to="https://chrome.google.com/webstore/detail/ovc-one-video-control/analeldnikfgekckpcppegfekineelbb">
+      <a to="https://chrome.google.com/webstore/detail/ovc-one-video-control/analeldnikfgekckpcppegfekineelbb">
         chrome web store and install it
-      </Link>
+      </a>
     </p>
   </div>
 );
+
+export default PrivacyPolicy;

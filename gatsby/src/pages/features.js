@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
+import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 import {
   CarouselProvider,
   Slider,
@@ -16,7 +17,37 @@ const FeatureStyles = styled.div`
   .feature-description {
     margin-bottom: 10px;
   }
+  .title.feature-title {
+    color: var(--ovc-purple);
+  }
 `;
+
+const WrapperStyles = styled.div`
+  height: 50%;
+  max-width: 90%;
+  margin: auto;
+  .carousel {
+    position: relative;
+  }
+  .carousel-btn {
+    position: absolute;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 6rem;
+    &:focus {
+      outline: none;
+    }
+    &.right {
+      right: -90px;
+    }
+    &.left {
+      left: -90px;
+    }
+  }
+`;
+
 export default function featuresPage({
   data: {
     features: { nodes: features },
@@ -25,13 +56,19 @@ export default function featuresPage({
 }) {
   console.log({ features, versions });
   return (
-    <div style={{ height: '50%' }}>
+    <WrapperStyles>
       <CarouselProvider
         // TODO: see if in mobile and set different width and height.
-        naturalSlideWidth={960}
-        naturalSlideHeight={540}
+        naturalSlideWidth={640}
+        naturalSlideHeight={360}
         totalSlides={features.filter((f) => f.youtubeEmbedCode).length}
       >
+        <ButtonBack className="carousel-btn left">
+          <FaChevronLeft />
+        </ButtonBack>
+        <ButtonNext className="carousel-btn right">
+          <FaChevronRight />
+        </ButtonNext>
         <Slider>
           {features
             .filter((f) => f.youtubeEmbedCode)
@@ -51,10 +88,8 @@ export default function featuresPage({
               </Slide>
             ))}
         </Slider>
-        <ButtonBack>Back</ButtonBack>
-        <ButtonNext>Next</ButtonNext>
       </CarouselProvider>
-    </div>
+    </WrapperStyles>
   );
 }
 

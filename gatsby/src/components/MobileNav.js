@@ -1,36 +1,93 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
 import styled from 'styled-components';
-import HamburgerMenu from 'react-hamburger-menu';
+import { getCustomAnimatedLink } from '../utils/general';
 
 const MobileNavStyles = styled.nav`
   @media (min-width: 800px) {
     display: none;
   }
   .menu {
-    top: 7px;
-    left: 7px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 33px;
+    height: 32px;
+    z-index: 6;
+    span {
+      width: 100%;
+      height: 2px;
+      background-color: var(--ovc-white);
+      transition: all 0.8s;
+      transform-origin: top left;
+      position: absolute;
+      &.top {
+        top: 10%;
+      }
+      &.middle {
+        top: 50%;
+      }
+      &.bottom {
+        bottom: 10%;
+      }
+    }
+    &.open {
+      .middle {
+        opacity: 0;
+      }
+      .top {
+        transform: rotate(45deg);
+      }
+      .bottom {
+        transform: rotate(-45deg);
+      }
+    }
   }
+
   ul {
     background-color: var(--ovc-secondary-color);
     list-style: none;
-    width: 100%;
     position: absolute;
-    top: 6px;
-    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    top: 30px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: 3;
+    align-items: center;
+    opacity: 1;
+    transition: all 0.7s;
+    top: 0;
     &.hidden {
-      display: none;
+      top: -100%;
+      opacity: 0;
     }
-    li ~ li {
-      border-top: 1px solid var(--ovc-purple);
+    li {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      height: 100%;
+      text-transform: uppercase;
+      font-size: 3rem;
+      align-items: center;
+      & ~ li {
+        border-top: 1px solid var(--ovc-white);
+      }
     }
     a {
       text-decoration: none;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 `;
 
-const activeStyle = { color: 'var(--ovc-text-color)' };
 const navItems = [
   { to: '/', text: 'Home' },
   { to: '/about/', text: 'About' },
@@ -42,29 +99,17 @@ const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <MobileNavStyles>
-      <HamburgerMenu
-        isOpen={isOpen}
-        menuClicked={() => setIsOpen((prev) => !prev)}
-        width={18}
-        height={15}
-        strokeWidth={1}
-        color="var(--ovc-purple)"
-        rotate={0}
-        borderRadius={0}
-        animationDuration={0.5}
-        className="menu"
-      />
+      <div
+        onClick={() => setIsOpen((prev) => !prev)}
+        className={`menu ${isOpen ? 'open' : 'close'}`}
+      >
+        <span className="top" />
+        <span className="middle" />
+        <span className="bottom" />
+      </div>
       <ul className={`${isOpen ? 'visible' : 'hidden'}`}>
         {navItems.map(({ to, text }) => (
-          <li>
-            <Link
-              to={to}
-              onClick={() => setIsOpen(false)}
-              activeStyle={activeStyle}
-            >
-              {text}
-            </Link>
-          </li>
+          <li>{getCustomAnimatedLink({ to, text })}</li>
         ))}
       </ul>
     </MobileNavStyles>
