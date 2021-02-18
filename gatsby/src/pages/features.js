@@ -10,24 +10,35 @@ import {
   ButtonNext,
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import isMobile from '../utils/isMobile';
 
 const FeatureStyles = styled.div`
   display: flex;
   flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
   .feature-description {
     margin-bottom: 10px;
+    font-size: ${({ mobile }) => (mobile ? '1.5rem' : '2rem')};
+    align-self: ${({ mobile }) => (mobile ? 'flex-start' : 'unset')};
   }
   .title.feature-title {
     color: var(--ovc-purple);
+    font-size: ${({ mobile }) => (mobile ? '2rem' : '4rem')};
+    align-self: ${({ mobile }) => (mobile ? 'flex-start' : 'unset')};
   }
 `;
 
 const WrapperStyles = styled.div`
-  height: 50%;
+  height: ${({ mobile }) => (mobile ? '80vh' : '50%')};
   max-width: 90%;
   margin: auto;
+  display: ${({ mobile }) => (mobile ? 'flex' : 'block')};
+  flex-direction: ${({ mobile }) => (mobile ? 'column' : 'row')};
+  justify-content: ${({ mobile }) => (mobile ? 'center' : 'unset')};
   .carousel {
-    position: relative;
+    position: ${({ mobile }) => (mobile ? 'unset' : 'relative')};
   }
   .carousel-btn {
     position: absolute;
@@ -46,6 +57,27 @@ const WrapperStyles = styled.div`
       left: -90px;
     }
   }
+  .mobile .carousel-btn {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 4rem;
+    right: unset;
+    left: unset;
+    z-index: 5;
+    svg {
+      transform: rotate(90deg);
+    }
+    &.left {
+      top: 0;
+    }
+    &.right {
+      bottom: 0;
+    }
+  }
 `;
 
 export default function featuresPage({
@@ -55,13 +87,16 @@ export default function featuresPage({
   },
 }) {
   console.log({ features, versions });
+  const mobile = isMobile();
   return (
-    <WrapperStyles>
+    <WrapperStyles mobile={mobile}>
       <CarouselProvider
         // TODO: see if in mobile and set different width and height.
-        naturalSlideWidth={640}
-        naturalSlideHeight={360}
+        naturalSlideWidth={mobile ? 360 : 640}
+        naturalSlideHeight={mobile ? 540 : 360}
+        orientation={mobile ? 'vertical' : 'horizontal'}
         totalSlides={features.filter((f) => f.youtubeEmbedCode).length}
+        className={mobile ? 'mobile' : ''}
       >
         <ButtonBack className="carousel-btn left">
           <FaChevronLeft />
@@ -74,7 +109,7 @@ export default function featuresPage({
             .filter((f) => f.youtubeEmbedCode)
             .map(({ description, featureTitle, youtubeEmbedCode }, index) => (
               <Slide index={index} className="ovc-slide" key={youtubeEmbedCode}>
-                <FeatureStyles>
+                <FeatureStyles mobile={mobile}>
                   <span className="title feature-title">{featureTitle}</span>
                   <span className="feature-description">{description}</span>
                   <iframe

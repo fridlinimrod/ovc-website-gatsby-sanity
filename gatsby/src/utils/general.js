@@ -29,7 +29,6 @@ export const getCustomAnimatedLink = ({ to, text }) => {
       direction={direction}
       cover
       bg={`url(${bg}) center no-repeat fixed ${bgColor}`}
-      color="rebeccapurple"
       to={to}
       activeStyle={activeStyle}
     >

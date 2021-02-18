@@ -9,7 +9,7 @@ const MobileNavStyles = styled.nav`
   .menu {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 10px;
     width: 33px;
     height: 32px;
     z-index: 6;
@@ -24,7 +24,7 @@ const MobileNavStyles = styled.nav`
         top: 10%;
       }
       &.middle {
-        top: 50%;
+        top: 47%;
       }
       &.bottom {
         bottom: 10%;
