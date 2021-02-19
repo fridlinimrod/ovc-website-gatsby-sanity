@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
@@ -80,18 +80,19 @@ const WrapperStyles = styled.div`
   }
 `;
 
-export default function featuresPage({
+export default function FeaturesPage({
   data: {
     features: { nodes: features },
     versions: { nodes: versions },
   },
 }) {
   console.log({ features, versions });
+  const [, setIsClient] = useState(false);
+  useEffect(() => setIsClient(true), []);
   const mobile = isMobile();
   return (
     <WrapperStyles mobile={mobile}>
       <CarouselProvider
-        // TODO: see if in mobile and set different width and height.
         naturalSlideWidth={mobile ? 360 : 640}
         naturalSlideHeight={mobile ? 540 : 360}
         orientation={mobile ? 'vertical' : 'horizontal'}

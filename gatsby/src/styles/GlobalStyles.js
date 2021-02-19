@@ -19,6 +19,9 @@ const GlobalStyles = createGlobalStyle`
   html,
   body {
     overscroll-behavior-y: contain;
+    margin: 0;
+    height: 100%;
+    overflow: hidden
   }
   html {
     /* background-image: url(${bg}); */
