@@ -88,8 +88,12 @@ export default function FeaturesPage({
 }) {
   console.log({ features, versions });
   const [, setIsClient] = useState(false);
-  useEffect(() => setIsClient(true), []);
-  const mobile = isMobile();
+  const [mobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+    setMobile(() => isMobile());
+  }, []);
   return (
     <WrapperStyles mobile={mobile}>
       <CarouselProvider
@@ -128,21 +132,3 @@ export default function FeaturesPage({
     </WrapperStyles>
   );
 }
-
-export const query = graphql`
-  query featuresQuery {
-    features: allSanityFeature {
-      nodes {
-        description
-        featureTitle
-        Version
-        youtubeEmbedCode
-      }
-    }
-    versions: allSanityVersion {
-      nodes {
-        versionNumber
-      }
-    }
-  }
-`;
