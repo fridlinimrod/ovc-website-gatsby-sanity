@@ -82,9 +82,9 @@ const WrapperStyles = styled.div`
 
 export default function FeaturesPage({
   data: {
-    features: { nodes: features },
-    versions: { nodes: versions },
-  },
+    features: { nodes: features } = {},
+    versions: { nodes: versions } = {},
+  } = {},
 }) {
   console.log({ features, versions });
   const [, setIsClient] = useState(false);
