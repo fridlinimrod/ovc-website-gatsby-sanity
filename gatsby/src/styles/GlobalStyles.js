@@ -16,6 +16,10 @@ const GlobalStyles = createGlobalStyle`
     --ovc-top-level-padding: 0 5%;
     --ovc-purple: #a4ade9;
   }
+  html,
+  body {
+    overscroll-behavior-y: contain;
+  }
   html {
     /* background-image: url(${bg}); */
     background: var(--ovc-main-color);
