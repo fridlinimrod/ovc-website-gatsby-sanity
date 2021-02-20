@@ -132,3 +132,21 @@ export default function FeaturesPage({
     </WrapperStyles>
   );
 }
+
+export const query = graphql`
+  query featuresQuery {
+    features: allSanityFeature {
+      nodes {
+        description
+        featureTitle
+        Version
+        youtubeEmbedCode
+      }
+    }
+    versions: allSanityVersion {
+      nodes {
+        versionNumber
+      }
+    }
+  }
+`;
