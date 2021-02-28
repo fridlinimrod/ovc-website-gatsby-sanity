@@ -37,6 +37,10 @@ const WrapperStyles = styled.div`
   display: ${({ mobile }) => (mobile ? 'flex' : 'block')};
   flex-direction: ${({ mobile }) => (mobile ? 'column' : 'row')};
   justify-content: ${({ mobile }) => (mobile ? 'center' : 'unset')};
+  h1 {
+    text-align: center;
+    text-decoration: underline;
+  }
   .carousel {
     position: ${({ mobile }) => (mobile ? 'unset' : 'relative')};
   }
@@ -51,10 +55,10 @@ const WrapperStyles = styled.div`
       outline: none;
     }
     &.right {
-      right: -90px;
+      right: -5rem;
     }
     &.left {
-      left: -90px;
+      left: -5rem;
     }
   }
   .mobile .carousel-btn {
@@ -96,6 +100,7 @@ export default function FeaturesPage({
   }, []);
   return (
     <WrapperStyles mobile={mobile}>
+      <h1>Features</h1>
       <CarouselProvider
         naturalSlideWidth={mobile ? 360 : 640}
         naturalSlideHeight={mobile ? 540 : 360}

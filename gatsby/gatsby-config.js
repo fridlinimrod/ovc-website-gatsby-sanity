@@ -12,6 +12,7 @@ export default {
     {
       resolve: 'gatsby-plugin-transition-link',
     },
+    'gatsby-plugin-twitter',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {

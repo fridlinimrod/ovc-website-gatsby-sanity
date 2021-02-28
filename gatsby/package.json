@@ -31,6 +31,7 @@
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-styled-components": "^3.3.10",
     "gatsby-plugin-transition-link": "^1.20.5",
+    "gatsby-plugin-twitter": "^2.10.0",
     "gatsby-source-sanity": "^6.0.4",
     "gsap": "^3.6.0",
     "isomorphic-fetch": "^2.2.1",
