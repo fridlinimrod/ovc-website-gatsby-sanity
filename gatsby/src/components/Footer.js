@@ -26,7 +26,7 @@ export default function Footer() {
         {/* <p>&copy; One Video Control (OVC) {new Date().getFullYear()}.</p> */}
         <span>Share with friends </span>
         <FacebookShareButton
-          url="onevideocontrol.com/features"
+          url="onevideocontrol.com/"
           quote="I am using OVC to save time and improve my video watching experience"
         >
           <FacebookIcon size={28} round />
