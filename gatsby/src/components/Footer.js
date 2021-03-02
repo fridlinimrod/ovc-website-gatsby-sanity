@@ -15,6 +15,7 @@ const FooterStyles = styled.footer`
     }
     button {
       line-height: 1 !important;
+      margin-right: 10px;
     }
   }
 `;
@@ -30,6 +31,13 @@ export default function Footer() {
         >
           <FacebookIcon size={28} round />
         </FacebookShareButton>
+        <span>Support OVC on Patreon</span>
+        <a
+          href="https://www.patreon.com/bePatron?u=36234672"
+          data-patreon-widget-type="become-patron-button"
+        >
+          Buy me a coffee?
+        </a>
       </div>
     </FooterStyles>
   );

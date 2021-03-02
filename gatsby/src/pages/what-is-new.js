@@ -16,7 +16,7 @@ const WhatIsNew = () => (
           This is the place to see the features' videos, to see what is new for
           the current version, etc.
           <br />
-          hopefully soon you can also contact me via this web site (suggest
+          Hopefully soon you can also contact me via this web site (suggest
           features, report bugs, etc).
         </li>
         <li>
@@ -26,10 +26,10 @@ const WhatIsNew = () => (
         </li>
         <li>
           <br />
-          *bug fix* - Toggle super speed could not be turned off (once you
+          *Bug fix* - Toggle super speed could not be turned off (once you
           toggled super speed, another click didn't do anything),
           <br />
-          reminder - the keyboard shortcut for toggling super speed on and off
+          Reminder - the keyboard shortcut for toggling super speed on and off
           is 'q', you can customize it in the shortcuts page.
         </li>
       </ul>
@@ -70,7 +70,7 @@ const WhatIsNew = () => (
       </a>
       &nbsp; in the store as well as a positive feedback.
       <br />
-      Help more people enjoy this and promise your place in heaven ;)
+      Help more people enjoy this and save yourself a spot in heaven ;)
     </h4>
   </div>
 );
