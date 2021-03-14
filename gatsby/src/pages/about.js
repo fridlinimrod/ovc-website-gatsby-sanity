@@ -45,7 +45,7 @@ export const About = () => (
         className="twitter-follow-button"
         data-show-count="false"
       >
-        Follow @FridliNimrod
+        Follow me on Twitter
       </a>
     </p>
   </div>

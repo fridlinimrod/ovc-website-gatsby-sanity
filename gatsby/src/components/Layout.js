@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import 'normalize.css';
+import { Helmet } from 'react-helmet';
 import Nav from './Nav';
 import MobileNav from './MobileNav';
 import Footer from './Footer';
@@ -31,6 +32,13 @@ const LayoutStyles = styled.div`
 export default function Layout({ children }) {
   return (
     <>
+      <Helmet>        
+        <script
+          async
+          src="https://c6.patreon.com/becomePatronButton.bundle.js"
+        />
+      </Helmet>
+
       <GlobalStyles />
       <Typography />
       <LayoutStyles>

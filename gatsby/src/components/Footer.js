@@ -36,7 +36,7 @@ export default function Footer() {
           href="https://www.patreon.com/bePatron?u=36234672"
           data-patreon-widget-type="become-patron-button"
         >
-          Buy me a coffee?
+          Buy me a Coffee?
         </a>
       </div>
     </FooterStyles>
