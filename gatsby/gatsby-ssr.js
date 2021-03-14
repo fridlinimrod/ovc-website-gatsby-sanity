@@ -18,6 +18,5 @@ export const onRenderBody = ({ setHeadComponents }) => {
       property="og:description"
       content="OVC - One Video Control, a chrome extension that helps you control all the videos you are watching online!"
     />,
-    <script async src="https://c6.patreon.com/becomePatronButton.bundle.js" />,
   ]);
 };
