@@ -11,26 +11,9 @@ const WhatIsNew = () => (
     <p>
       <ul>
         <li>
-          *New Feature* - Finally, OVC has a website (you are currently in it).
-          <br />
-          This is the place to see the features' videos, to see what is new for
-          the current version, etc.
-          <br />
-          Hopefully soon you can also contact me via this web site (suggest
-          features, report bugs, etc).
-        </li>
-        <li>
-          <br />
-          *New Feature* - you can now control the opacity of OVC (you can make
-          it almost invisible if you would like).
-        </li>
-        <li>
-          <br />
-          *Bug fix* - Toggle super speed could not be turned off (once you
-          toggled super speed, another click didn't do anything),
-          <br />
-          Reminder - the keyboard shortcut for toggling super speed on and off
-          is 'q', you can customize it in the shortcuts page.
+          *New Feature* - (requested by a happy user) Favorite speed! you can
+          now set a favorite speed and toggle it on and off with a click of a
+          button (or a keyboard shortcut) - see video below.
         </li>
       </ul>
     </p>
@@ -56,7 +39,7 @@ const WhatIsNew = () => (
     <br />
     <iframe
       title="new-version-video"
-      src="https://www.youtube.com/embed/YlXhpr6bNA4?controls=0"
+      src="https://www.youtube.com/embed/vVVEYcZCw2Y?controls=0"
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
