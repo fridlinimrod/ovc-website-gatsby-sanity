@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
     overscroll-behavior-y: contain;
     margin: 0;
     height: 100%;
-    overflow: hidden
+    overflow: hidden;
   }
   html {
     /* background-image: url(${bg}); */
@@ -37,6 +37,9 @@ const GlobalStyles = createGlobalStyle`
       --ovc-text-color: "black";
       --ovc-top-level-padding: 0 5%;
       --ovc-purple: #a4ade9;
+    }
+    @media (max-width: 800px) {
+      height: -webkit-fill-available;
     }
   }
   body {
