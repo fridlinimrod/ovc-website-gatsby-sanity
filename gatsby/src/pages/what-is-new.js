@@ -15,7 +15,7 @@ const WhatIsNew = () => (
           OVC's tooltips
         </li>
         <li>
-          *New Feature* - (also requested by multiple usera): "Where do I
+          *New Feature* - (also requested by multiple users): "Where do I
           configure the keyboard shortcuts??" - finally easy access.
         </li>
       </ul>
