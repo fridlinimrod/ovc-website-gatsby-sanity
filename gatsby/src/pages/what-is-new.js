@@ -11,9 +11,12 @@ const WhatIsNew = () => (
     <p>
       <ul>
         <li>
-          *New Feature* - (requested by a happy user) Favorite speed! you can
-          now set a favorite speed and toggle it on and off with a click of a
-          button (or a keyboard shortcut) - see video below.
+          *New Feature* - (requested by a happy user) make it possible to remove
+          OVC's tooltips
+        </li>
+        <li>
+          *New Feature* - (also requested by multiple usera): "Where do I
+          configure the keyboard shortcuts??" - finally easy access.
         </li>
       </ul>
     </p>
@@ -39,7 +42,7 @@ const WhatIsNew = () => (
     <br />
     <iframe
       title="new-version-video"
-      src="https://www.youtube.com/embed/vVVEYcZCw2Y?controls=0"
+      src="https://www.youtube.com/embed/8Wl39UKcVRo"
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
